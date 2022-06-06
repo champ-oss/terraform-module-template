@@ -74,7 +74,7 @@ jobs:
 
       - name: jira-notify
         if: steps.terratest.outputs.status == 'failure'
-        uses: champ-oss/jira-notification@develop
+        uses: champ-oss/jira-notification@v1.0.0-aa474ae
         with:
           JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
           JIRA_HOST: ${{ secrets.JIRA_HOST }}
