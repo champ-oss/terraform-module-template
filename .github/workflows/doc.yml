@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.ACTION_TOKEN }}
 
       - name: Render terraform docs inside the README.md and push changes back to PR branch
         uses: terraform-docs/gh-actions@v1.0.0
@@ -16,8 +16,3 @@ jobs:
           output-file: README.md
           output-method: inject
           git-push: "true"
-      - name: update status check
-        run: |
-          git commit -m "retrigger checks" --allow-empty
-          GIT_BRANCH=`git branch --show-current`
-          git push origin $GIT_BRANCH
