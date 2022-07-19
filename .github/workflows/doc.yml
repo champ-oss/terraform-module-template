@@ -1,6 +1,8 @@
 name: Generate terraform docs
 on:
-  - pull_request
+  pull_request:
+    branches-ignore:
+    - file-sync
 jobs:
   docs:
     runs-on: ubuntu-latest
