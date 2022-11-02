@@ -1,6 +1,6 @@
 plugin "champtitles" {
   enabled = true
-  version = "1.0.0"
+  version = "1.1.0"
   source  = "github.com/champ-oss/tflint-ruleset-champtitles"
 }
 
