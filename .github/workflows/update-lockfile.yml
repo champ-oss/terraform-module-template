@@ -18,7 +18,7 @@ jobs:
           token: ${{ secrets.ACTION_TOKEN }}
       - uses: hashicorp/setup-terraform@v3.0.0 # https://github.com/hashicorp/setup-terraform/releases
         with:
-          terraform_version: 1.5.5 # https://github.com/hashicorp/terraform/releases
+          terraform_version: 1.6.2 # https://github.com/hashicorp/terraform/releases
           terraform_wrapper: false
       - uses: champ-oss/update-terraform-lockfile@v1.0.31-7cac677
         with:
