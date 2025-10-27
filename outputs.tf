@@ -1,5 +1,5 @@
 output "aws_region" {
-  description = "AWS region name"
+  description = "AWS Region name"
   value       = data.aws_region.this.name
 }
 
